@@ -1,0 +1,24 @@
+This assumes that one uses an ordinary network calble to connect from the esp32 board to the sp30 board.
+The network cable has stiped and non-striped versions of blue, orange, green, and brown.
+
+Pin 1 - Orange     - Not used
+Pin 2 - 1/2 Orange - Not used
+Pin 3 - Blue
+	  - Connected to a 1kOmh resistor and then to optocoupler 3 in
+	  - Connected to a diode and then to relay 3 out
+	Function:
+Pin 4 - 1/2 Blue
+	  - Connected to 1,2,3 ground out
+	  Function: This is the ground of the live wires which are used to register a pushed button
+Pin 5 - Green
+	  - Connected to a 2.2 kOhm resistor and then to relay 2 out
+	  - Connected to a 1 kOhm resistor ant then to optocoupler 2 in
+	  Function:
+Pin 6 1/2 Green
+	  - Connected to a 2.2 kOhm resistor and then to relay 2 out
+	  - Connected to a 1 kOhm resistor ant then to optocoupler 2 in
+	   Function 
+Pin 7 - Brown
+	  - Connected to optocoupler ground in
+      Function: Provide negative pole for the optocoupler
+Pin 8 - 1/2 Brown Not used
