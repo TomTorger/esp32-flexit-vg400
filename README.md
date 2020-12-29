@@ -13,6 +13,8 @@ This project is still in progress. I blew a relay on the main board in this proc
  - 1x 4kOhm resistor
  - Wires
 
+<img src="https://github.com/TomTorger/no.almli.flexit.zuno/blob/master/docs_esp32/esp32_protoboard_phase1.jpg" width="1173" height="787">
+
 ### Other hardware
  - Rpi4
 
