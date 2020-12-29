@@ -1,5 +1,26 @@
 # Flexit SP 30
 
+This project is still in progress. I blew a relay on the main board in this process. I believe that the resistor for the relay controlling "high" fan speed might be too small.
+
+### Implementation for esp32 and Home Assistant
+ - esp32
+ - [SP425 controller board](https://www.flexit.no/produkter/ventilasjonsaggregat/utgatte_modeller/tilbehor_aggregater_utgatte_modeller/sp425_styringskort_for_sentralstyring_sd/styringskort_datastyring_sp425/)
+ - 3x3V relays
+ - Network cable (RJ45)
+ - Prototyping board
+ - 3x 1kOhm resistors
+ - 2x 2kOhm resistors
+ - 1x 4kOhm resistor
+ - Wires
+
+### Other hardware
+ - Rpi4
+
+### Software
+ - Home Assistant running in docker container
+ - Esphome running in docker container
+
+
 Flexit SP 30 panel to Z-UNO.
 
 ### Hardware

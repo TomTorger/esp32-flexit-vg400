@@ -1,0 +1,122 @@
+esphome:
+  name: ventilasjon
+  platform: ESP32
+  board: esp-wrover-kit
+
+wifi:
+  ssid: "low"
+  password: ""
+  
+  reboot_timeout: 60s
+  fast_connect: on
+  power_save_mode: none
+  manual_ip: 
+    static_ip: 192.168.11.46
+    gateway: 192.168.11.1
+    subnet: 255.255.255.0
+    
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  #ap:
+  #  ssid: "Ventilasjon Fallback Hotspot"
+  #  password: "YdEqz6EPlW9m"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+  services:
+    - service: set_low
+      then:
+        - switch.turn_off: relay2
+        - switch.turn_off: relay1
+    - service: set_medium
+      then:
+        - switch.turn_off: relay1
+        - delay: 200ms
+        - switch.turn_on: relay2
+    - service: set_high
+      then:
+        - switch.turn_off: relay2
+        - delay: 200ms
+        - switch.turn_on: relay1
+    - service: turn_on_heating
+      then:
+        - switch.turn_on: relay3
+    - service: turn_off_heating
+      then:
+        - switch.turn_off: relay3
+
+ota:
+  password: ""
+
+# Individual sensors
+#sensor:
+#  - platform: dht
+#    pin: GPIO32
+#    model: DHT22
+#    temperature:
+#      name: "Garasje lufttemp"
+#      accuracy_decimals: 1
+#    humidity:
+#      name: "Garasje luftfukt"
+#      accuracy_decimals: 0
+#    update_interval: 60s
+    
+switch:
+  - platform: gpio
+    pin: 18
+    id: relay1
+    restore_mode: ALWAYS_OFF
+  - platform: template
+    name: "High"
+    icon: "mdi:gate"
+    turn_on_action:
+    - switch.turn_off: relay2
+    - delay: 1200ms
+    - switch.turn_on: relay1
+  - platform: gpio
+    pin: 19
+    id: relay2
+    restore_mode: ALWAYS_OFF
+  - platform: template
+    name: "Medium"
+    icon: "mdi:gate"
+    turn_on_action:
+    - switch.turn_off: relay1
+    - delay: 1200ms
+    - switch.turn_on: relay2
+  - platform: gpio
+    pin: 21
+    id: relay3
+    restore_mode: ALWAYS_OFF
+  - platform: template
+    name: "Low"
+    icon: "mdi:gate"
+    turn_on_action:
+    - switch.turn_off: relay2
+    - switch.turn_off: relay1
+    
+    
+binary_sensor:
+  - platform: gpio
+    pin: 
+      number: 32
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Fan level 1"
+  - platform: gpio
+    pin: 
+      number: 33
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Fan level 2"
+  - platform: gpio
+    pin: 
+      number: 26
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Heating"
