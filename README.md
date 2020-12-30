@@ -6,6 +6,7 @@ This project is still in progress. I blew a relay on the main board in this proc
  - esp32
  - [SP425 controller board](https://www.flexit.no/produkter/ventilasjonsaggregat/utgatte_modeller/tilbehor_aggregater_utgatte_modeller/sp425_styringskort_for_sentralstyring_sd/styringskort_datastyring_sp425/)
  - 3x3V relays
+ - 3x (optocouplers)(https://www.aliexpress.com/snapshot/0.html?spm=a2g0s.9042647.6.2.efc94c4dL4MLqK&orderId=8122469696856060&productId=32833204725)
  - Network cable (RJ45)
  - Prototyping board
  - 3x 1kOhm resistors
