@@ -4,10 +4,12 @@ This project is still in progress. I blew a relay on the main board in this proc
 
 ### Implementation for esp32 and Home Assistant
  - esp32
- - [SP425 controller board](https://www.flexit.no/produkter/ventilasjonsaggregat/utgatte_modeller/tilbehor_aggregater_utgatte_modeller/sp425_styringskort_for_sentralstyring_sd/styringskort_datastyring_sp425/)
- - 3x3V relays
+ - [SP425 controller board](https://www.flexit.no/produkter/ventilasjonsaggregat_bolig/automatikk_utgatte_modeller/styresystem_sp_30/)
+ - 3x3V [relays] (https://www.aliexpress.com/item/32963196636.html?spm=a2g0s.9042311.0.0.27424c4dnUIR03)
+ - 3x [optocouplers](https://www.aliexpress.com/item/32833204725.html?spm=a2g0s.12269583.0.0.ca892879PIkUG4)
  - Network cable (RJ45)
- - Prototyping board
+ - [Prototyping board] (https://www.aliexpress.com/item/32944526042.html?spm=a2g0s.9042311.0.0.27424c4deBLnzu)
+ - 4x [Dallas thermometers] (https://www.aliexpress.com/item/32523899337.html?spm=a2g0s.9042311.0.0.27424c4d34b0Tb)
  - 3x 1kOhm resistors
  - 2x 2kOhm resistors
  - 1x 4kOhm resistor
