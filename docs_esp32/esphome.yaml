@@ -52,6 +52,25 @@ api:
 
 ota:
   password: ""
+  
+dallas:
+  - pin: 4
+    update_interval: 10s
+
+# Individual sensors
+sensor:
+  - platform: dallas
+    address: 0x350300A2795F9028
+    name: "Fraluft Varm"
+  - platform: dallas
+    address: 0x5A0300A279A44C28
+    name: "Tilluft Kald"
+  - platform: dallas
+    address: 0x5C0300A279066C28
+    name: "Fraluft Kald"
+  - platform: dallas
+    address: 0xD30300A279DF5628
+    name: "Tilluft Varm"
 
 # Individual sensors
 #sensor:
