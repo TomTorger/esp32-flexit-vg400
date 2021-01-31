@@ -2,6 +2,9 @@
 
 This project is still in progress. I blew a relay on the main board in this process. I believe that the resistor for the relay controlling "high" fan speed might be too small.
 
+<img src="https://github.com/TomTorger/no.almli.flexit.zuno/blob/master/docs_esp32/ventilation_dashboard.png" width="1600">
+
+
 ### Implementation for esp32 and Home Assistant
  - esp32
  - [SP425 controller board](https://www.flexit.no/produkter/ventilasjonsaggregat_bolig/automatikk_utgatte_modeller/styresystem_sp_30/)
