@@ -26,7 +26,7 @@ The project is still in progress. I blew a relay on the main board during this p
   - CO2, Radon, VOC, humidity sensor [Airthings Wave plus] https://www.airthings.com/en/wave-plus
   - Intel nuc i5
   - 
-<img src="https://github.com/TomTorger/esp32-flexit-vg400/blob/master/pictures/esp32_protoboard_phase1.jpg" width="1000">
+<img src="https://github.com/TomTorger/esp32-flexit-vg400/blob/master/pictures/esp32_protoboard_phase1.jpg" width="500">
 
 ### Software
  - Home Assistant running in docker container
