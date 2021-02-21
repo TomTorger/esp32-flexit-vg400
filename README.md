@@ -4,8 +4,7 @@ This project connects an esp32 to a VG400 from Flexit, measure the temperatures 
 
 The project is still in progress. I blew a relay on the main board during this project and I suspect that the resistor for the relay controlling "high" fan speed might be too small.
 
-<img src="https://github.com/TomTorger/no.almli.flexit.zuno/blob/master/docs_esp32/ventilation_dashboard.png" width="1600">
-
+<img src="https://github.com/TomTorger/esp32-flexit-vg400/blob/master/docs/ventilation_dashboard.png" width="1600">
 
 ### Implementation for esp32 and Home Assistant
 
@@ -27,7 +26,7 @@ The project is still in progress. I blew a relay on the main board during this p
   - CO2, Radon, VOC, humidity sensor [Airthings Wave plus] https://www.airthings.com/en/wave-plus
   - Intel nuc i5
   - 
-<img src="https://github.com/TomTorger/no.almli.flexit.zuno/blob/master/docs_esp32/esp32_protoboard_phase1.jpg" width="1000">
+<img src="https://github.com/TomTorger/esp32-flexit-vg400/blob/master/docs/esp32_protoboard_phase1.jpg" width="1000">
 
 ### Software
  - Home Assistant running in docker container
