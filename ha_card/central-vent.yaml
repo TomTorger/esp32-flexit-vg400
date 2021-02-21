@@ -1,0 +1,174 @@
+
+type: picture-elements
+image: /local/vg400_8.png
+title: ""
+elements:
+  #Temperatures
+  - type: state-icon
+    icon: mdi:arrow-right-bold-outline
+    entity: sensor.temp_tilluft_kald
+    style: {left: 16%, top: 36%}
+  - type: state-label
+    entity: sensor.temp_tilluft_kald
+    style: {left: 16%, top: 45%}
+  - type: state-icon
+    icon: mdi:arrow-right-bold-outline
+    entity: sensor.temp_tilluft_varm
+    style: {left: 84%, top: 62%}
+  - type: state-label
+    entity: sensor.temp_tilluft_varm
+    style: {left: 84%, top: 71%}
+  - type: state-icon
+    icon: mdi:arrow-left-bold-outline
+    entity: sensor.temp_fraluft_kald
+    style: {left: 16%, top: 62%}
+  - type: state-label
+    entity: sensor.temp_fraluft_kald
+    style: {left: 16%, top: 71%}
+  - type: state-icon
+    icon: mdi:arrow-left-bold-outline
+    entity: sensor.temp_fraluft_varm
+    style: {left: 84%, top: 36%}
+  - type: state-label
+    entity: sensor.temp_fraluft_varm
+    style: {left: 84%, top: 45%}
+  #Temperature setting
+  - type: state-icon
+    entity: input_boolean.varmeregulering_stue
+    icon: mdi:power
+    tap_action: {action: toggle}
+    style: {left: 92%, top: 36%}
+  - type: state-icon
+    icon: mdi:arrow-up-bold
+    entity: input_number.setpunkt_temp_stue
+    style: {left: 92%, top: 50%}
+    tap_action:
+      action: call-service
+      service: input_number.increment
+      service_data:
+        entity_id: input_number.setpunkt_temp_stue
+  - type: state-label
+    entity: input_number.setpunkt_temp_stue
+    style: {left: 92%, top: 60%}                
+  - type: state-icon
+    icon: mdi:arrow-down-bold
+    entity: input_number.setpunkt_temp_stue
+    style: {left: 92%, top: 70%}
+    tap_action:
+      action: call-service
+      service: input_number.decrement
+      service_data:
+        entity_id: input_number.setpunkt_temp_stue
+  - type: state-icon
+    entity: input_boolean.ventilasjonsregulering
+    icon: mdi:power
+    tap_action: {action: toggle}
+    style: {left: 8%, top: 36%}
+  # Services
+  - type: state-icon
+    entity: switch.ventilasjon
+    icon: mdi:power
+    tap_action: {action: toggle}
+    style: {left: 25%, top: 9%}
+  - type: service-button
+    title: Av/På
+    service: switch.toggle
+    service_data:
+      entity_id: switch.power
+    style: {left: 25%, top: 17%}
+  - type: state-icon
+    entity: binary_sensor.fan_level_low
+    icon: mdi:circle-double
+    style: {left: 37.5%, top: 9%}
+  - type: service-button
+    title: Lav
+    service: esphome.ventilasjon_set_low
+    style: {left: 37.5%, top: 17%}
+  - type: state-icon
+    entity: binary_sensor.fan_level_medium
+    icon: mdi:circle-double
+    style: {left: 50%, top: 9%}
+  - type: service-button
+    title: Medium
+    service: esphome.ventilasjon_set_medium
+    style: {left: 50%, top: 17%}
+  - type: state-icon
+    entity: binary_sensor.fan_level_high
+    icon: mdi:circle-double
+    style: {left: 62.5%, top: 9%}
+  - type: service-button
+    title: Høy
+    service: esphome.ventilasjon_set_high
+    style: {left: 62.5%, top: 17%}
+  - type: state-icon
+    entity: switch.varme
+    icon: mdi:power
+    tap_action:
+      action: toggle
+    style: {left: 75%, top: 9%}
+  - type: service-button
+    title: Varme
+    service: switch.toggle
+    service_data:
+      entity_id: switch.varme
+    style: {left: 75%, top: 17%}
+  # statistikk
+  - type: state-icon
+    entity: sensor.anneks_co2
+    style: {left: 10%, top: 86%}
+  - type: state-label
+    entity: sensor.anneks_co2
+    style: {left: 10%, top: 95%}
+  - type: state-icon
+    entity: sensor.anneks_luftfukt
+    style: {left: 26%, top: 86%}
+  - type: state-label
+    entity: sensor.anneks_luftfukt
+    style: {left: 26%, top: 95%}
+  - type: state-icon
+    icon: mdi:flask
+    entity: sensor.anneks_voc
+    style: {left: 42%, top: 86%}
+  - type: state-label
+    entity: sensor.anneks_voc
+    style: {left: 42%, top: 95%}
+  - type: state-icon
+    entity: sensor.anneks_radon
+    style: {left: 58%, top: 86%}
+  - type: state-label
+    entity: sensor.anneks_radon
+    style: {left: 58%, top: 95%}
+  - type: state-icon
+    entity: sensor.spotpris_strom
+    style: {left: 74%, top: 86%}
+  - type: state-label
+    entity: sensor.spotpris_strom
+    style: {left: 74%, top: 95%}
+  - type: state-icon
+    icon: mdi:transmission-tower
+    entity: sensor.ventilasjon_watt
+    style: {left: 90%, top: 86%}
+  - type: state-label
+    entity: sensor.ventilasjon_watt
+    style: {left: 90%, top: 95%}
+  - type: state-icon
+    icon: mdi:weather-partly-snowy-rainy
+    entity: sensor.temp_ute
+    style: {left: 8%, top: 9%}
+  - type: state-icon
+    icon: mdi:thermometer
+    entity: sensor.temp_ute
+    style: {left: 12%, top: 9%}
+  - type: state-label
+    entity: sensor.temp_ute
+    style: {left: 10%, top: 17%}
+  - type: state-icon
+    icon: mdi:home-variant-outline
+    entity: sensor.soft_temp_stue
+    style: {left: 88%, top: 9%}
+  - type: state-icon
+    entity: sensor.soft_temp_stue
+    style: {left: 92%, top: 9%}
+  - type: state-label
+    entity: sensor.soft_temp_stue
+    style: {left: 90%, top: 17%}
