@@ -1,6 +1,6 @@
 # Flexit SP 30
 
-This project connects an esp32 to a VG400 from Flexit, measure the temperatures of incoming and exiting air, and regulate the ventilation based on the readings of Radon, CO2, VOC, and humidity.
+This project connects an esp32 to a VG400 central ventilation unit from Flexit, measures the temperatures of incoming and exiting air, and regulate the ventilation based on the readings of Radon, CO2, VOC, and humidity.
 
 The project is still in progress. I blew a relay on the main board during this project and I suspect that the resistor for the relay controlling "high" fan speed might be too small.
 
